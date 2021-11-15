@@ -7,8 +7,18 @@ body {
 
 header {
   background-color: $bg-card;
-  
+
   img {
     height: 60px;
+  }
+}
+
+main {
+  padding: 100px 0;
+
+  .card {
+    background-color: $bg-card;
+    height: 450px;
+    cursor: pointer;
   }
 }

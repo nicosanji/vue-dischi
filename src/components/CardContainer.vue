@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="row row-cols-5">
+    <div class="row row-cols-5 gy-5">
       <Card
         v-for="(cd, i) in cdList"
         :key="i"
