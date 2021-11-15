@@ -1,5 +1,7 @@
 <template>
-  <h1 class="container text-primary">Titolo pagina</h1>
+  <header class="container-fluid py-3">
+    <img src="..\assets\spotify-logo.png" alt="logo" />
+  </header>
 </template>
 
 <script>

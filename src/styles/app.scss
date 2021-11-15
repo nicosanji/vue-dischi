@@ -1,2 +1,14 @@
 @import "~bootstrap/scss/bootstrap";
 @import "variables.scss";
+
+body {
+  background-color: $bg-body;
+}
+
+header {
+  background-color: $bg-card;
+  
+  img {
+    height: 60px;
+  }
+}
