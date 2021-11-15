@@ -1,5 +1,5 @@
 <template>
-  <h1>Titolo pagina</h1>
+  <h1 class="container text-primary">Titolo pagina</h1>
 </template>
 
 <script>
@@ -7,5 +7,3 @@ export default {
   name: "Header",
 };
 </script>
-
-<style></style>
