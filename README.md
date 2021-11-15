@@ -1,5 +1,11 @@
 # vue-dischi
 
+
+### Api dischi
+```
+https://flynn.boolean.careers/exercises/api/array/music
+```
+
 ## Project setup
 ```
 npm install
