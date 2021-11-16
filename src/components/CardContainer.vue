@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <div class="row">
-      <Select></Select>
+      <Select :genreList="genreList" @selectClick="onSelectGenre"></Select>
     </div>
     <div class="row row-cols-5 gy-5">
       <Card
-        v-for="(cd, i) in cdList"
+        v-for="(cd, i) in listByGenre"
         :key="i"
         :author="cd.author"
         :title="cd.title"
@@ -28,7 +28,36 @@ export default {
   data() {
     return {
       cdList: [],
+      selectedGenre: "",
     };
+  },
+  // methods -> modifico i dati
+  methods: {
+    onSelectGenre(selection) {
+      this.selectedGenre = selection;
+    },
+  },
+  // computed -> modifico il modo in cui vengono visualizzati i dati
+  computed: {
+    genreList() {
+      const genreObject = {};
+      this.cdList.forEach((cd) => {
+        const { genre } = cd;
+        if (!genreObject[genre]) {
+          genreObject[genre] = 0;
+        }
+        genreObject[genre]++;
+      });
+      return genreObject;
+    },
+    listByGenre() {
+      if (!this.selectedGenre) {
+        return this.cdList;
+      }
+      return this.cdList.filter((cd) => {
+        return this.selectedGenre === cd.genre;
+      });
+    },
   },
   mounted() {
     axios

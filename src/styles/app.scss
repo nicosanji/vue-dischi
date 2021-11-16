@@ -14,12 +14,16 @@ header {
 }
 
 main {
-  padding: 100px 0;
+  padding: 60px 0;
 
   .form-select {
     width: 30%;
     background-color: $bg-body;
     border: 3px solid $bg-card;
+    margin-bottom: 60px;
+    color: #6c757d;
+    font-weight: bold;
+    font-size: 1.2rem;
   }
 
   .card {
@@ -27,5 +31,4 @@ main {
     height: 450px;
     cursor: pointer;
   }
-
 }

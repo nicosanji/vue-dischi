@@ -1,17 +1,20 @@
 <template>
-  <select class="form-select mb-5 mx-auto text-white">
-    <option selected>Seleziona un genere...</option>
-    <option value="Rock">Rock</option>
-    <option value="Pop">Pop</option>
-    <option value="Jazz">Jazz</option>
-    <option value="Metal">Metal</option>
+  <select
+    class="form-select rounded-0 mx-auto"
+    @click="$emit('selectClick', $event.target.value)"
+  >
+    <option value="">All</option>
+    <option v-for="(num, gen) in genreList" :key="gen" :value="gen">
+      {{ gen }}
+    </option>
   </select>
 </template>
 
 <script>
 export default {
   name: "Select",
+  props: {
+    genreList: Object,
+  },
 };
 </script>
-
-<style></style>
