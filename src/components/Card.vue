@@ -18,6 +18,7 @@ export default {
     poster: String,
     title: String,
     author: String,
+    genre: String,
     year: String,
   },
 };

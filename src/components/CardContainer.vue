@@ -1,5 +1,8 @@
 <template>
   <div class="container">
+    <div class="row">
+      <Select></Select>
+    </div>
     <div class="row row-cols-5 gy-5">
       <Card
         v-for="(cd, i) in cdList"
@@ -8,6 +11,7 @@
         :title="cd.title"
         :year="cd.year"
         :poster="cd.poster"
+        :genre="cd.genre"
       ></Card>
     </div>
   </div>
@@ -16,9 +20,10 @@
 <script>
 import axios from "axios";
 import Card from "./Card.vue";
+import Select from "./Select.vue";
 
 export default {
-  components: { Card },
+  components: { Card, Select },
   name: "CardContainer",
   data() {
     return {
